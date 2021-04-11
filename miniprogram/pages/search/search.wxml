@@ -1,0 +1,4 @@
+<!--pages/search/search.wxml-->
+<van-cell-group wx:for="{{musicList}}">
+  <van-cell title="{{item.name}}" value="{{item.artists[0].name}}" bindtap="click" data-index="{{index}}"/>
+</van-cell-group>

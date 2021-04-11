@@ -1,0 +1,20 @@
+
+<van-cell-group>
+  <van-field
+    bind:blur="getHight"
+    required
+    type="number"
+    label="身高（cm）"
+    placeholder="请输入身高"
+  />
+
+  <van-field
+    bind:blur="getWeight"
+    type="number"
+    label="体重（kg）"
+    placeholder="请输入体重"
+    required
+    border="{{ false }}"
+  />
+</van-cell-group>
+<van-button type="primary" size="large" bind:click="submit">提交数据</van-button>

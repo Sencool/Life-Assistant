@@ -1,0 +1,7 @@
+/* pages/BMI/BMI.wxss */
+van-button{
+  margin-top: 3rem;
+}
+.top{
+  margin:1rem auto;
+}

@@ -1,0 +1,11 @@
+<van-divider contentPosition="left">健康状况</van-divider>
+<van-cell-group>
+  <van-cell title="BMI指数" value="{{BMI}}" url="../../pages/BMI/BMI"/>
+  <van-cell center title="健康建议"  label="{{info}}" />
+</van-cell-group>
+
+
+<van-divider contentPosition="left">锻炼计时</van-divider>
+<van-cell title="锻炼计时" is-link link-type="navigateTo" url="../../pages/countDown/countDown"/>
+<van-cell title="锻炼总次数" value="{{count}}"/>
+

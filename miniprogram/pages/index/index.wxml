@@ -1,0 +1,74 @@
+<view class="card">
+  <image src="../../images/money.png" class="qianbao" ></image>
+  <view class="cardsource">
+    <view>净收入：{{all}}</view>
+    <view>收 入：{{income}}</view>
+    <view>支 出：{{out}}</view>
+  </view>
+</view>
+<van-dialog
+  use-slot
+  title="新的愿望"
+  show="{{dreamShow}}"
+  show-confirm-button
+  show-cancel-button
+  bind:confirm="submit"
+  bind:cancel="dialogOnClose"
+>
+  <form>
+    <input name="barcode" placeholder="请输入愿望" bindinput="dreamInput" value="{{txt}}"></input>
+    <input name="name" placeholder="请输入价格" bindinput="aimInput"></input>
+    <input name="name" placeholder="您准备每次存多少钱" bindinput="onceInput"></input>
+  </form>	
+</van-dialog>
+
+<van-dialog
+  use-slot
+  title="收支"
+  show="{{IAEShow}}"
+  show-confirm-button
+  show-cancel-button
+  bind:confirm="IAEsubmit"
+  bind:cancel="dialogOnClose"
+>
+  <form>
+    <input name="barcode" placeholder="收入还是支出（+/-）" bindinput="panInput"></input>
+    <input name="name" placeholder="请输入数量" bindinput="moneyInput"></input>
+    <input name="name" placeholder="请说明途径" bindinput="valInput"></input>
+  </form>	
+</van-dialog>
+
+
+<van-tabs type="card" swipeable="true" animated="true">
+  <van-tab title="收支列表">
+    <view class="list" style="width: 748rpx; height: 690rpx; display: block; box-sizing: border-box">
+      <view  wx:for="{{list}}">
+        <van-cell title="{{item.value}}" icon="{{item.icon}}" value="{{item.pan}}{{item.money}}" id="{{item._id}}" bindtap="del"/>
+      </view>
+    </view>
+    <van-button round type="info" class="roundBtn" bindtap="listAdd">+</van-button>
+  </van-tab>
+
+
+  <van-tab title="梦想资金">
+    
+    <view wx:for="{{dreamList}}">
+      <view class="dream" bindtap="click" wx:if="{{item.success}}" id="{{item._id}}">
+        <view class="left1">目标金额：{{item.aim}}</view>
+        <view class="right">目标：{{item.value}}</view>
+        <view class="left2">距离目标：{{item.aim-item.count*item.once}}</view>
+      </view>
+      <view class="dream" wx:else>
+        <view>恭喜获得{{item.value}}</view>
+      </view>
+    </view>
+    <van-button type="primary" block bindtap="addDream">添加新梦想</van-button>
+  
+  </van-tab>
+ 
+
+  <van-tab title="随手记">
+    
+  </van-tab>
+</van-tabs>
+

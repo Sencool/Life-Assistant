@@ -1,0 +1,8 @@
+<van-cell-group>
+  <van-field placeholder="请输入课程名称" border="true" bind:blur="getKcmc" bind:focus="focus1" error="{{mcerr}}"/>
+  <van-field placeholder="请输入课程长度(节)" border="true" bind:blur="getSkcd" bind:focus="focus2" maxlength="2" error="{{cderr}}"/>
+  <van-field placeholder="请输入上课开始时间" border="true" bind:blur="getSkjc" bind:focus="focus3" maxlength="1" error="{{jcerr}}"/>
+  <van-field placeholder="请输入周几上课" border="true" bind:blur="getXqj" bind:focus="focus4" maxlength="1" error="{{xqerr}}"/>
+</van-cell-group>
+<van-button type="primary" size="large" bindtap="submit">提交数据</van-button>
+<van-dialog id="van-dialog" />

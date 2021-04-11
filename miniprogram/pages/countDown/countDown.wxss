@@ -1,0 +1,4 @@
+/* pages/countDown/countDown.wxss */
+van-button{
+  margin:2rem auto 0;
+}

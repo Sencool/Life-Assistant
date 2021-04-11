@@ -1,0 +1,52 @@
+.card{
+  height: 300rpx;
+  margin:5rpx 15rpx 10rpx;
+  border: 1px solid #fff;
+  border-radius: 30rpx;
+  background-color: bisque;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.qianbao{
+  flex: 0 0 300rpx;
+  height: 286rpx;
+  display: block;
+}
+.cardsource{
+  flex: 1;
+  padding-left: 30rpx;
+}
+.list{
+ max-height: 675rpx;
+}
+
+
+.dream{
+  height: 250rpx;
+  margin:5rpx 15rpx 10rpx;
+  border: 1px solid #fff;
+  border-radius: 30rpx;
+  background: linear-gradient(to right, #80f0ff, 45%, #9e5ac9);
+}
+.left1{
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+}
+.right{
+  float: right;
+  margin-right: 20rpx;
+
+}
+.left2{
+  margin-top:80rpx;
+  margin-left: 20rpx;
+
+}
+
+.roundBtn{
+  position: absolute;
+  bottom: 40rpx;
+  right: 300rpx;
+}

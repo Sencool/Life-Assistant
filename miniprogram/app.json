@@ -1,0 +1,70 @@
+{
+  "pages": [
+    "pages/music/music",
+    "pages/schedule/schedule",
+    "pages/schedulesetting/schedulesetting",
+    "pages/index/index",
+    "pages/user/user",
+    "pages/BMI/BMI",
+    "pages/countDown/countDown",
+    "pages/search/search"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "生活小助手",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#DC143C",
+    "borderStyle": "white",
+    "color":"#000000",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "小账本",
+      "iconPath": "images/tabbaricon/diff.png",
+      "selectedIconPath": "images/tabbaricon/diff-c.png"
+    },
+    {
+      "pagePath": "pages/schedule/schedule",
+      "text": "课程表",
+      "iconPath": "images/tabbaricon/calendar.png",
+      "selectedIconPath": "images/tabbaricon/calendar-c.png"
+    },
+    {
+      "pagePath": "pages/music/music",
+      "text": "音乐",
+      "iconPath": "images/tabbaricon/music.png",
+      "selectedIconPath": "images/tabbaricon/music-c.png"
+    },
+    {
+      "pagePath": "pages/user/user",
+      "text": "个人",
+      "iconPath": "images/tabbaricon/user.png",
+      "selectedIconPath": "images/tabbaricon/user-c.png"
+    }
+  ]
+  },
+  
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-panel": "@vant/weapp/panel/index",
+    "van-count-down": "@vant/weapp/count-down/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-nav-bar": "@vant/weapp/nav-bar/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-search": "@vant/weapp/search/index"
+
+  }
+}

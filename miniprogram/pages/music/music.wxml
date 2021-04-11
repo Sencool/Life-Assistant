@@ -1,0 +1,23 @@
+<van-search
+  value="{{ value }}"
+  shape="round"
+  background="#4fc08d"
+  placeholder="请输入搜索关键词"
+  bind:search="search"
+/>
+
+<view class='item'>
+    <text>音乐播放器</text>
+    <image class='audio_post{{music_on?" music_on":""}}'  style="animation-play-state:{{music_playing?'running':'paused'}}" src='../../images/changpian.png' ></image>
+ 
+    <view class='audio_progress'>
+      <slider block-size='14' bindchange='audioChange' bindchanging='audioChanging' value='{{sliderValue}}'></slider>
+      <view>{{musicTime}}</view>
+    </view>
+    <view class='audio_control'>
+      <button type='primary' bindtap='playMusic'>播放</button>
+      <button type='primary' bindtap='pauseMusic'>暂停</button>
+      <button type='primary' bindtap='stopMusic'>停止</button>
+    </view>
+    
+  </view>
