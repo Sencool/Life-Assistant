@@ -58,8 +58,8 @@
         <view class="right">目标：{{item.value}}</view>
         <view class="left2">距离目标：{{item.aim-item.count*item.once}}</view>
       </view>
-      <view class="dream" wx:else>
-        <view>恭喜获得{{item.value}}</view>
+      <view class="dream dream-1" wx:else>
+        <view class="happy">恭喜获得{{item.value}}</view>
       </view>
     </view>
     <van-button type="primary" block bindtap="addDream">添加新梦想</van-button>
@@ -68,7 +68,11 @@
  
 
   <van-tab title="随手记">
-    
+      请记录下您当前的想法
+    <view class="ediborder">
+      
+      <editor></editor>
+    </view>
   </van-tab>
 </van-tabs>
 

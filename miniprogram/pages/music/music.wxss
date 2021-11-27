@@ -53,6 +53,12 @@
   height:80rpx; 
   line-height:80rpx;
 }
+
+.paihang{
+  margin:0 auto;
+  width: 150rpx;
+  height: 150rpx;
+}
  
 /* 旋转动画 */
 @keyframes audio-rotate {

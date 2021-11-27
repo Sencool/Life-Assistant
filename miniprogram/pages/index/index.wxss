@@ -50,3 +50,14 @@
   bottom: 40rpx;
   right: 300rpx;
 }
+
+.dream-1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ediborder{
+  margin: 20rpx;
+  border:1px solid black;
+  background-color: #fff;
+}

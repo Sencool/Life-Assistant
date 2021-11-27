@@ -1,10 +1,7 @@
 // 云函数入口文件
 const cloud = require('wx-server-sdk')
 
-cloud.init({
-  traceUser: true,
-  env: 'a-8gvoblc1d20aa4ae'
-})
+cloud.init()
 
 const db = cloud.database()
 // 云函数入口函数

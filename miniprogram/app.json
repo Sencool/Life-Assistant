@@ -1,13 +1,14 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/music/music",
     "pages/schedule/schedule",
     "pages/schedulesetting/schedulesetting",
-    "pages/index/index",
     "pages/user/user",
     "pages/BMI/BMI",
     "pages/countDown/countDown",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/biaoshengbang/biaoshengbang"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -40,7 +41,7 @@
     },
     {
       "pagePath": "pages/user/user",
-      "text": "个人",
+      "text": "健康",
       "iconPath": "images/tabbaricon/user.png",
       "selectedIconPath": "images/tabbaricon/user-c.png"
     }
@@ -64,7 +65,8 @@
     "van-nav-bar": "@vant/weapp/nav-bar/index",
     "van-icon": "@vant/weapp/icon/index",
     "van-dialog": "@vant/weapp/dialog/index",
-    "van-search": "@vant/weapp/search/index"
+    "van-search": "@vant/weapp/search/index",
+    "van-image": "@vant/weapp/image/index"
 
   }
 }

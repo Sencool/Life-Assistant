@@ -145,24 +145,26 @@ Page({
   },
   // 删除
   del:async function(e){
-    // // console.log(e.target.id)
+    // console.log(e.target.id)
     var id = e.target.id
     wx.showModal({
       title: '提示',
-      content: '这是一个模态弹窗',
+      content: '是否删除这条数据',
       success:function (res) {
         if (res.confirm) {
-          wx.cloud.callFunction({
-            name:'del',
-            data:{
-              _id:id
-            }
-          })
+          // 调用云函数
+         wx.cloud.callFunction({
+           name:'del',
+           data:{
+             _id:id
+           }
+         })
+          console.log(111)
         }
       },
       complete:this.getList()
     }) 
-    console.log(this)
+    // console.log(this)
     this.getList() 
   },
 

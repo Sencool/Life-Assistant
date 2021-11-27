@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    colorArrays: ["#FC9F9D", "#0A9A84"],
+    colorArrays: ["#FC9F9D", "#0A9A84",	"#00FFFF","#FFE4C4"],
     wlist: []
   },
   getList(){
@@ -24,8 +24,28 @@ Page({
       url: '../schedulesetting/schedulesetting',
     })
   },
-  dda(){
-    console.log('')
+  dda:async function(e){
+    wx.showModal({
+      title: '提示',
+      content: '是否删除这条数据',
+      success: function (res) {
+        if (res.confirm) {
+          var event = e.currentTarget.id;
+          const db = wx.cloud.database();
+          const schedule = db.collection('schedule');
+          schedule.where({
+            kcmc:event,
+            // xqj:event[1]
+          })
+          .get()
+          .then(r=>{
+            schedule.doc(r.data[0]._id).remove()
+          })
+        }
+      },
+      complete:this.getList()
+    }) 
+    this.getList()
   },
 
   /**

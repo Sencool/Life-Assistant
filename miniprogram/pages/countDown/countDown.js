@@ -7,8 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    time:10000
-
+    time:10000,
   },
 
   start() {
@@ -30,6 +29,17 @@ Page({
   },
   finished() {
     Toast('完成了')
+    wx.cloud.database().collection('sCount').doc('1')
+    .get()
+    .then(res=>{
+      wx.cloud.database().collection('sCount').doc('1')
+      .update({
+        data:{
+          count:res.data.count+1
+        }
+      })
+    })
+    
   },
   click(){
     this.setData({

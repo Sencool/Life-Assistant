@@ -36,7 +36,11 @@ Page({
       url: '../search/search',
     })
   },
-  
+  paihang:function(){
+    wx.navigateTo({
+      url: '../biaoshengbang/biaoshengbang',
+    })
+  },
  
   /**
    * 生命周期函数--监听页面初次渲染完成
